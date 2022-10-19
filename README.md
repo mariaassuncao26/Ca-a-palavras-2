@@ -1,2 +1,2 @@
-# Ca-a-palavras-2
+# palavras
 Desenvolver um caça-palavras utilizando matriz e JavaScript
