@@ -8,29 +8,43 @@
     <title>Caça-palavras</title>
 </head>
 <body>
-    <table border="1" width="400" height="400" >
-        <script>
-            matriz = new Array;
-            matriz = [["P","G","I","R","A","S","S","O","L","S","T"],["B","A","M","A","L","N","T","J","B","M","P"],["E","N","A","T","U","L","S","K","R","A","C"],["G","C","R","N","C","M","F","T","O","R","N"],["O","I","G","L","A","R","R","L","M","K","B"],["N","N","A","R","C","I","S","O","E","A","C"],["I","E","R","C","I","N","T","K","L","M","I"],["A","R","I","A","Z","A","L","E","I","A","N"],["R","A","D","K","S","T","N","P","A","R","T"],["O","R","A","T","U","L","I","P","A","I","S"],["S","I","C","A","L","E","N","D","U","L","A",],["C","A","P","B","T","N","S","S","K","I","K"],["R","K","T","G","I","R","R","A","M","S","T",]];
+    <div class="wrapper">
+        <div class="cima"></div>
+        <div class="titulo"><p>Caça-palavras de flores</p></div>
+        <div><img src="imgs/fft.jpg" id="f1"></div>
+        <div><img src="imgs/fft.jpg" id="f2"></div>
+        <div><img src="imgs/fft.jpg" id="f3"></div>
+        <div><img src="imgs/fft.jpg" id="f4"></div>
+        <div class="p">
+            <div class="p1"><p>Calêndula  -   Bromélia  -   Cinerária  -   Margarida  -   Amarílis</p></div>
+            <div class="p2"><p>Girassol  -   Begônia  -   Azaleia  -   Tulipa   -  Narciso</p></div>
+        </div>
+        <table class="tabela">
+            <script>
+                matriz = new Array;
+                matriz = [["P","G","I","R","A","S","S","O","L","S","T"],["B","A","M","A","L","N","T","J","B","M","P"],["E","N","A","T","U","L","S","K","R","A","C"],["G","C","R","N","C","M","F","T","O","R","N"],["O","I","G","L","A","R","R","L","M","K","B"],["N","N","A","R","C","I","S","O","E","A","C"],["I","E","R","C","I","N","T","K","L","M","I"],["A","R","I","A","Z","A","L","E","I","A","N"],["R","A","D","K","S","T","N","P","A","R","T"],["O","R","A","T","U","L","I","P","A","I","S"],["S","I","C","A","L","E","N","D","U","L","A",],["C","A","P","B","T","N","S","S","K","I","K"],["R","K","T","G","I","R","R","A","M","S","T",]];
+            
+                b = new Array
+                b = [[0,1,1,1,1,1,1,1,1,0,0],[1,0,1,0,0,0,0,0,1,0,0],[1,0,1,0,0,0,0,0,1,0,0],[1,1,1,0,0,0,0,0,1,0,0],[1,1,1,0,0,0,0,0,1,0,0],[1,1,1,1,1,1,1,1,1,1,0],[1,1,1,0,0,0,0,0,1,1,0],[1,1,1,1,1,1,1,1,1,1,0],[0,1,1,0,0,0,0,0,1,1,0],[0,1,1,1,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,1,1,1,1],[0,1,0,0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0,0,1,0]];
 
-            for(linha=0;linha<13;linha++){
-                for(coluna=0;coluna<11;coluna++){
-                    document.write("<td>" + matriz[linha][coluna] + "</td>");
-                }
+                for(linha=0;linha<13;linha++){
                     document.write("<tr>")
-            }
+                    for(coluna=0;coluna<11;coluna++){                    
+                        if(b[linha][coluna] == 1){
+                            document.write("<td style='background-color: #91A176';>" + matriz[linha][coluna] + "</td>");
+                        }
+                        else{
+                            document.write("<td>" + matriz[linha][coluna] + "</td>");
+                        }
+                        
+                    }
+                        document.write("</tr>")
+                }
 
-            matriz = [[0,1,1,1,1,1,1,1,1,0,0],[1,0,1,0,0,0,0,0,2,0,0],[1,0,1,0,0,0,0,0,1,0,0],[1,1,1,0,0,0,0,0,1,0,0],[1,1,1,0,0,0,0,0,1,0,0],[1,1,1,1,1,1,1,1,1,1,0],[1,1,1,0,0,0,0,0,1,1,0],[1,1,1,1,1,1,1,1,1,1,0],[0,1,1,0,0,0,0,0,1,1,0],[0,1,1,1,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,1,1,1,1],[0,1,0,0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0,0,1,0]];
 
-            if(matriz == 1){
-                document.write(matriz[linha][coluna] + "<bg color='#417a72'>");
-            }
-
-            else{
-
-            }
-
-        </script>
-    </table>
+            </script>
+        </table>
+        <div class="baixo"></div>
+    </div>
 </body>
 </html>
